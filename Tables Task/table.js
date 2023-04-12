@@ -73,3 +73,11 @@ obj.forEach((i) => {
     tr.append(td1, td2, td3, td4, td5, td6);
     document.querySelector("tbody").append(tr);
 });
+
+function test(){
+    let a = 10;
+}
+
+test.a = 20;
+
+console.log(test.a);
