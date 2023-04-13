@@ -51,6 +51,7 @@ const obj = [
 
 obj.forEach((i) => {
     var tr = document.createElement("tr");
+    tr.setAttribute('class',"tr1");
 
     var td1 = document.createElement("td");
     td1.innerText = i.name;
