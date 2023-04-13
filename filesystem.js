@@ -19,3 +19,4 @@ console.log("Data is appended to file successfully.")
 //Read File
 data = fs.readFileSync('sample.txt');
 console.log("Data in the file after appending is - \n" + data.toString());
+
