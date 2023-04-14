@@ -1,5 +1,7 @@
+if(!sessionStorage.getItem('flag')){
+  redirect();
+}
 var time = 0;
-var i = 1;
 
 window.onfocus = function () { time = 0; }
 window.onclick = function () { time = 0; }
@@ -14,12 +16,15 @@ var frequency = setInterval(function () {
   time++;
   if (time > 5) { // 10 Sec time
     clearInterval(frequency);
+    sessionStorage.clear();
     myModal.show();
   }
-  if(onclick === 'window.location.reload()'){
-    redirect();
-  }
 }, 1000)
+
+
+if(sessionStorage.getItem("")){
+  redirect();
+}
 
 function login() {
   redirect();

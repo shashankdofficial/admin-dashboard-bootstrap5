@@ -8,6 +8,7 @@ function myfunc() {
 
     if (user === email && pass === password) {
         console.log(true);
+        sessionStorage.setItem('flag','true');
         window.location.assign('admin.html')
     }
     else {
