@@ -14,8 +14,10 @@ var frequency = setInterval(function () {
   time++;
   if (time > 5) { // 10 Sec time
     clearInterval(frequency);
-    i = 0;
     myModal.show();
+  }
+  if(onclick === 'window.location.reload()'){
+    redirect();
   }
 }, 1000)
 
@@ -154,11 +156,11 @@ const tbody1 = table.querySelector('.tbody1');
 const rows1 = tbody1.querySelectorAll('.tr1');
 
 console.log(rows1);
-const pageCount1 = Math.ceil(rows1.length / 10);
+const pageCount1 = Math.ceil(rows1.length / 5);
 
 function showPage(page) {
-  const startIndex = (page - 1) * 10;
-  const endIndex = startIndex + 10;
+  const startIndex = (page - 1) * 5;
+  const endIndex = startIndex + 5;
   for (let i = 0; i < rows1.length; i++) {
     const row = rows1[i];
     if (i >= startIndex && i < endIndex) {
@@ -311,11 +313,11 @@ const table2 = document.getElementById("example2");
 const tbody2 = table2.querySelector('.tbody2');
 const rows2 = tbody2.querySelectorAll('.tr2');
 
-const pageCount2 = Math.ceil(rows2.length / 10);
+const pageCount2 = Math.ceil(rows2.length / 5);
 
 function showPage2(page) {
-  const startIndex = (page - 1) * 10;
-  const endIndex = startIndex + 10;
+  const startIndex = (page - 1) * 5;
+  const endIndex = startIndex + 5;
   for (let i = 0; i < rows2.length; i++) {
     const row = rows2[i];
     if (i >= startIndex && i < endIndex) {
