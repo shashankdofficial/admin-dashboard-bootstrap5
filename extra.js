@@ -20,3 +20,33 @@ console.log("Data is appended to file successfully.")
 data = fs.readFileSync('sample.txt');
 console.log("Data in the file after appending is - \n" + data.toString());
 
+
+
+
+
+
+// let filepath = '.' + req.url;
+
+//     if (filepath === './') {
+//         filepath = './index.html';
+//     }
+//     const extname = path.extname(filepath);
+//     let contentType = 'text/html';
+//     fs.readFile(filepath, (err, Content) => {
+//         if (err) {
+//             if (err.code === 'ENOENT') {
+//                 res.writeHead(404);
+//                 res.end('404 Not found!');
+//             }
+//             else{
+//                 res.writeHead(500);
+//                 res.end('Internal server error');
+//             }
+//         }
+//         else{
+//             res.writeHead(200, {'Content-Type': contentType});
+//             res.end(Content, 'utf8');
+//         }
+//         console.log("To check");
+//         res.end(data);
+//     });
