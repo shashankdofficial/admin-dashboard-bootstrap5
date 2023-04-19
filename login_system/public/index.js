@@ -1,3 +1,7 @@
+if (sessionStorage.getItem('flag')) {
+    window.location.assign('/admin');
+}
+
 var email1 = 'allyouget14@gmail.com';
 var password1 = '123456';
 
