@@ -64,30 +64,18 @@
                         </button>
                     </div>
                 </form>
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown rounded">
-                        <a class="nav-link dropdown-toggle ms-2" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <i class="bi bi-person-fill text-dark"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                <button class="btn btn-dark p-1 m-2" onclick="logOff();"><i
+                        class="bi bi-box-arrow-in-right p-2"></i></button>
             </div>
         </div>
     </nav>
     <!-- Top navigation End -->
 
-     <!-- Sidebar Start -->
-     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <!-- Sidebar Start -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel"><a class="nav-link text-dark" href="/admin" >JStreams Solutions</a></h5>
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel"><a class="nav-link text-dark" href="/admin">JStreams
+                    Solutions</a></h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
@@ -135,10 +123,10 @@
         </div>
     </div>
     <!-- Sidebar End -->
-    
-    <div class="container m-auto mt-5 p-3">
+
+    <div class="container-fluid m-auto mt-5 p-3">
         <form class="shadow p-3 mb-5 bg-body rounded m-auto col-12 col-md-6 col-lg-4" autocomplete="off">
-            <h1 class="m-auto">Form</h1>
+            <h1 class="m-auto text-center">Add Employee</h1>
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" class="form-control" id="name" name="name" autocomplete="false"
@@ -150,21 +138,30 @@
                     placeholder="name@email.com">
             </div>
             <div class="mb-3">
+                <label for="date" class="form-label">Date Of Birth</label>
+                <input type="date" class="form-control" id="dateofbirth" name="dateofbirth" placeholder="Date of Birth">
+            </div>
+            <div class="mb-3">
+                <label for="date" class="form-label">Date Of Joining</label>
+                <input type="date" class="form-control" id="dateofjoining" name="dateofjoining"
+                    placeholder="Date of Joining">
+            </div>
+            <div class="mb-3">
                 <label for="department" class="form-label">Department</label>
                 <select class="form-select" aria-label="Default select example" id="department" name="department">
                     <option selected>Select The Department</option>
-                    <option value="1">HR</option>
-                    <option value="2">IT</option>
-                    <option value="3">Operations</option>
+                    <option value="hr">HR</option>
+                    <option value="it">IT</option>
+                    <option value="ops">Operations</option>
                 </select>
             </div>
             <div class="mb-3">
                 <label for="role" class="form-label">Role</label>
                 <select class="form-select" aria-label="Default select example" id="role" name="role">
                     <option selected>Select The Role</option>
-                    <option value="1">PMO</option>
-                    <option value="2">Admin</option>
-                    <option value="3">Employee</option>
+                    <option value="pmo">PMO</option>
+                    <option value="admin">Admin</option>
+                    <option value="emp">Employee</option>
                 </select>
             </div>
             <button type="submit" class="btn btn-primary" id="save">Submit</button>

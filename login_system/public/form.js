@@ -35,15 +35,21 @@ function redirect() {
     window.location.assign("index");
 }
 
+function logOff() {
+    sessionStorage.clear();
+    redirect();
+}
 
 // Form data submission start
 
 const save = document.querySelector('#save');
 
-const saveEmp = async() => {
+const saveEmp = async () => {
     console.log("hi");
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
+    var dateofbirth = document.getElementById("dateofbirth").value;
+    var dateofjoining = document.getElementById("dateofjoining").value;
     var department = document.getElementById("department").value;
     var role = document.getElementById("role").value;
 
@@ -52,17 +58,19 @@ const saveEmp = async() => {
     console.log(department);
     console.log(role);
 
-    let response = await fetch("http://localhost:3000/submit",{
-        method:"POST",
-        headers:{
-            Accept:"application/json",
-            "Content-Type":"application/json"
+    let response = await fetch("http://localhost:3000/submit", {
+        method: "POST",
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json"
         },
-        body:JSON.stringify({
-            "name":name,
-            "role":role,
-            "department":department,
-            "email":email
+        body: JSON.stringify({
+            "name": name,
+            "role": role,
+            "dateofbirth": dateofbirth,
+            "dateofjoining": dateofjoining,
+            "department": department,
+            "email": email
         })
     });
     console.log(response);

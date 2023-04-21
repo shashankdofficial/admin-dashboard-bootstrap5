@@ -61,7 +61,7 @@ app.post('/submit', (req, res) => {
       });
     }
     else {
-      arr=[];
+      arr = [];
       arr.push(req.body);
       const data = JSON.stringify(arr);
       fs.writeFile('input.json', data, function (err) {

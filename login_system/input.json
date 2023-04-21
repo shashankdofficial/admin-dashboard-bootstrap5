@@ -1,1 +1,26 @@
-[{"name":"Shashank Dubey","role":"1","department":"1","email":"shashankrd14@gmail.com"},{"name":"Rohit Dubey","role":"3","department":"2","email":"rohit14@gmail.com"}]
+[
+    {
+        "name": "Shashank Dubey",
+        "role": "pmo",
+        "dateofbirth": "2000-12-04",
+        "dateofjoining": "2023-12-03",
+        "department": "hr",
+        "email": "shashankrd14@gmail.com"
+    },
+    {
+        "name": "Rohit Dubey",
+        "role": "admin",
+        "dateofbirth": "2000-12-04",
+        "dateofjoining": "2023-12-03",
+        "department": "it",
+        "email": "rohit14@gmail.com"
+    },
+    {
+        "name": "Pranshu",
+        "role": "emp",
+        "dateofbirth": "2000-04-20",
+        "dateofjoining": "2023-03-13",
+        "department": "ops",
+        "email": "pranshu@gmail.com"
+    }
+]

@@ -35,6 +35,11 @@ function redirect() {
     window.location.assign("index");
 }
 
+function logOff() {
+    sessionStorage.clear();
+    redirect();
+}
+
 //For table 1 --> Start =============================================
 
 const obj1 = [
@@ -160,6 +165,6 @@ $(document).ready(function () {
 });
 
 
-function toForm(){
+function toForm() {
     window.location.assign("form");
 }
