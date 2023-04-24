@@ -2,24 +2,32 @@
     {
         "name": "Shashank Dubey",
         "role": "pmo",
-        "dateofbirth": "2000-12-04",
-        "dateofjoining": "2023-12-03",
+        "dateofbirth": "04/05/2023",
+        "dateofjoining": "04/19/2023",
         "department": "hr",
-        "email": "shashankrd14@gmail.com"
+        "email": "shashank14@gmail.com"
     },
     {
         "name": "Rohit Dubey",
+        "role": "pmo",
+        "dateofbirth": "04/04/2023",
+        "dateofjoining": "04/12/2023",
+        "department": "hr",
+        "email": "rohit@gmail.com"
+    },
+    {
+        "name": "Falak",
         "role": "admin",
-        "dateofbirth": "2000-12-04",
-        "dateofjoining": "2023-12-03",
+        "dateofbirth": "04/04/2023",
+        "dateofjoining": "04/09/2023",
         "department": "it",
-        "email": "rohit14@gmail.com"
+        "email": "falak@gmail.com"
     },
     {
         "name": "Pranshu",
-        "role": "emp",
-        "dateofbirth": "2000-04-20",
-        "dateofjoining": "2023-03-13",
+        "role": "pmo",
+        "dateofbirth": "04/06/2023",
+        "dateofjoining": "04/11/2023",
         "department": "ops",
         "email": "pranshu@gmail.com"
     }

@@ -10,7 +10,9 @@
     </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon.png">
 </head>
 
 <body>
@@ -130,25 +132,25 @@
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" class="form-control" id="name" name="name" autocomplete="false"
-                    placeholder="Full Name">
+                    placeholder="Full Name" required>
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
                 <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
-                    placeholder="name@email.com">
+                    placeholder="name@email.com" required>
             </div>
             <div class="mb-3">
                 <label for="date" class="form-label">Date Of Birth</label>
-                <input type="date" class="form-control" id="dateofbirth" name="dateofbirth" placeholder="Date of Birth">
+                <input type="text" class="form-control" id="datepicker" name="dateofbirth" placeholder="Date of Birth" required>
             </div>
             <div class="mb-3">
                 <label for="date" class="form-label">Date Of Joining</label>
-                <input type="date" class="form-control" id="dateofjoining" name="dateofjoining"
-                    placeholder="Date of Joining">
+                <input type="text" class="form-control" id="datepicker2" name="dateofjoining"
+                    placeholder="Date of Joining" required>
             </div>
             <div class="mb-3">
                 <label for="department" class="form-label">Department</label>
-                <select class="form-select" aria-label="Default select example" id="department" name="department">
+                <select class="form-select" aria-label="Default select example" id="department" name="department" required>
                     <option selected>Select The Department</option>
                     <option value="hr">HR</option>
                     <option value="it">IT</option>
@@ -157,7 +159,7 @@
             </div>
             <div class="mb-3">
                 <label for="role" class="form-label">Role</label>
-                <select class="form-select" aria-label="Default select example" id="role" name="role">
+                <select class="form-select" aria-label="Default select example" id="role" name="role" required>
                     <option selected>Select The Role</option>
                     <option value="pmo">PMO</option>
                     <option value="admin">Admin</option>
@@ -168,28 +170,13 @@
         </form>
     </div>
 
-    <!-- Modal Start -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Session Timeout</h1>
-                </div>
-                <div class="modal-body">
-                    You are logged out, click on log-in button to again log-in.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" onclick="login()">Log in</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal End -->
+    <%- include('include/modal') -%>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="/static/form.js"></script>
 </body>
 

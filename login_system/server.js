@@ -28,6 +28,14 @@ app.get('/index', (req, res) => {
 app.get('/admin', (req, res) => {
   console.log("Inside Admin page");
   res.render('admin', { title: "Admin Dashboard" });
+
+})
+
+//Get table data from file
+app.get('/getdata', (req, res) => {
+  const d = JSON.parse(fs.readFileSync('input.json'));
+  console.log(d)
+  return res.status(200).send({ data: d })
 })
 
 //Form route

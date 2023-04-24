@@ -45,18 +45,14 @@ function logOff() {
 const save = document.querySelector('#save');
 
 const saveEmp = async () => {
-    console.log("hi");
+    event.preventDefault();
+    
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
-    var dateofbirth = document.getElementById("dateofbirth").value;
-    var dateofjoining = document.getElementById("dateofjoining").value;
+    var dateofbirth = document.getElementById("datepicker").value;
+    var dateofjoining = document.getElementById("datepicker2").value;
     var department = document.getElementById("department").value;
     var role = document.getElementById("role").value;
-
-    console.log(name);
-    console.log(email);
-    console.log(department);
-    console.log(role);
 
     let response = await fetch("http://localhost:3000/submit", {
         method: "POST",
@@ -73,8 +69,29 @@ const saveEmp = async () => {
             "email": email
         })
     });
+    if(response.status===200){
+        // alert('Form Submitted succesfully');
+        window.location.assign('form');
+    }
+    else{
+        window.location.assign('404');
+    }
     console.log(response);
 }
 save.addEventListener('click', saveEmp);
 
 // Form data Submission End
+
+$( function() {
+    $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
+  } );
+
+  $( function() {
+    $( "#datepicker2" ).datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
+  } );
