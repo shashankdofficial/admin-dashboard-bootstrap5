@@ -53,7 +53,6 @@ const saveEmp = async () => {
         let n = document.querySelector('.name1');
         n.style.color = 'red';
         n.innerHTML = 'Name cannot be null';
-        // $('.name').attr('required','required');
         return;
     }
 
@@ -62,7 +61,6 @@ const saveEmp = async () => {
         let n = document.querySelector('.email1');
         n.style.color = 'red';
         n.innerHTML = 'Email cannot be null';
-        // $('.name').attr('required','required');
         return;
     }
     if (!(email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/))) {
@@ -77,7 +75,6 @@ const saveEmp = async () => {
         let n = document.querySelector('.dateofbirth1');
         n.style.color = 'red';
         n.innerHTML = 'DOB cannot be null';
-        // $('.name').attr('required','required');
         return;
     }
 
@@ -86,7 +83,6 @@ const saveEmp = async () => {
         let n = document.querySelector('.dateofjoining1');
         n.style.color = 'red';
         n.innerHTML = 'DOJ cannot be null';
-        // $('.name').attr('required','required');
         return;
     }
 
@@ -95,7 +91,6 @@ const saveEmp = async () => {
         let n = document.querySelector('.department1');
         n.style.color = 'red';
         n.innerHTML = 'Please select department';
-        // $('.name').attr('required','required');
         return;
     }
 
@@ -104,7 +99,6 @@ const saveEmp = async () => {
         let n = document.querySelector('.role1');
         n.style.color = 'red';
         n.innerHTML = 'Please slect Role';
-        // $('.name').attr('required','required');
         return;
     }
 
@@ -155,3 +149,28 @@ $(function () {
         yearRange: "-100:+16"
     });
 });
+
+
+function clear2(){
+
+    let n1 = document.querySelector('.email1');
+    n1.innerHTML = '';
+
+    let n2 = document.querySelector('.name1');
+    n2.innerHTML = '';
+
+    let n3 = document.querySelector('.dateofbirth1');
+    n3.innerHTML = '';
+
+    let n4 = document.querySelector('.dateofjoining1');
+    n4.innerHTML = '';
+
+    let n5 = document.querySelector('.department1');
+    n5.innerHTML = '';
+
+    let n6 = document.querySelector('.role1');
+    n6.innerHTML = '';
+    
+    let n = document.querySelector('.allreq');
+    n.innerHTML = '';
+}

@@ -128,34 +128,35 @@
 
     <div class="container-fluid m-auto mt-5 p-3">
         <form class="shadow p-3 mb-5 bg-body rounded m-auto col-12 col-md-6 col-lg-4" autocomplete="off">
+            <p class="allreq"></p>
             <h1 class="m-auto text-center">Add Employee</h1>
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" class="form-control" id="name" name="name" autocomplete="false"
-                   placeholder="Full Name" required>
+                   placeholder="Full Name" onchange="clear2();" required>
                 <p class="name1"></p>
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
                 <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
-                    placeholder="name@email.com" required>
+                    placeholder="name@email.com" onchange="clear2();" required>
                 <p class="email1"></p>
             </div>
             <div class="mb-3">
                 <label for="date" class="form-label">Date Of Birth</label>
                 <input type="text" class="form-control" id="datepicker" name="dateofbirth" 
-                placeholder="Date of Birth" required>
+                placeholder="Date of Birth" onchange="clear2();" required>
                 <p class="dateofbirth1"></p>
             </div>
             <div class="mb-3">
                 <label for="date" class="form-label">Date Of Joining</label>
                 <input type="text" class="form-control" id="datepicker2" name="dateofjoining"
-                    placeholder="Date of Joining" required>
+                    placeholder="Date of Joining" onchange="clear2();" required>
                     <p class="dateofjoining1"></p>
             </div>
             <div class="mb-3">
                 <label for="department" class="form-label">Department</label>
-                <select class="form-select" aria-label="Default select example" id="department" name="department" required>
+                <select class="form-select" aria-label="Default select example" id="department" name="department" onchange="clear2();" required>
                     <option selected>Select The Department</option>
                     <option value="hr">HR</option>
                     <option value="it">IT</option>
@@ -165,7 +166,7 @@
             </div>
             <div class="mb-3">
                 <label for="role" class="form-label">Role</label>
-                <select class="form-select" aria-label="Default select example" id="role" name="role" required>
+                <select class="form-select" aria-label="Default select example" id="role" name="role" onchange="clear2();" required>
                     <option selected>Select The Role</option>
                     <option value="pmo">PMO</option>
                     <option value="admin">Admin</option>

@@ -32,7 +32,7 @@ function login() {
 }
 
 function redirect() {
-    window.location.assign("index");
+    window.location.assign("/");
 }
 
 function logOff() {
