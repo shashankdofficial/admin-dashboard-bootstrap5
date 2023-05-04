@@ -1,5 +1,5 @@
 if (!sessionStorage.getItem('flag')) {
-    redirect();
+    window.location.assign("/")
 }
 var time = 0;
 
@@ -15,7 +15,7 @@ var myModal = new bootstrap.Modal(document.getElementById("staticBackdrop"));
 
 var frequency = setInterval(function () {
     time++;
-    if (time > 20) { // 10 Sec time
+    if (time > 200) { // 10 Sec time
         clearInterval(frequency);
         sessionStorage.clear();
         myModal.show();

@@ -28,7 +28,6 @@ app.get('/index', (req, res) => {
 app.get('/admin', (req, res) => {
   console.log("Inside Admin page");
   res.render('admin', { title: "Admin Dashboard" });
-
 })
 
 //Get table data from file

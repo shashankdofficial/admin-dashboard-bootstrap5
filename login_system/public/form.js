@@ -15,7 +15,7 @@ var myModal = new bootstrap.Modal(document.getElementById("staticBackdrop"));
 
 var frequency = setInterval(function () {
     time++;
-    if (time > 20) { // 10 Sec time
+    if (time > 200) { // 10 Sec time
         clearInterval(frequency);
         sessionStorage.clear();
         myModal.show();
@@ -32,7 +32,7 @@ function login() {
 }
 
 function redirect() {
-    window.location.assign("index");
+    window.location.assign("/");
 }
 
 function logOff() {
@@ -46,13 +46,67 @@ const save = document.querySelector('#save');
 
 const saveEmp = async () => {
     event.preventDefault();
-    
+
     var name = document.getElementById("name").value;
+    console.log("Name: ", name);
+    if (!name) {
+        let n = document.querySelector('.name1');
+        n.style.color = 'red';
+        n.innerHTML = 'Name cannot be null';
+        // $('.name').attr('required','required');
+        return;
+    }
+
     var email = document.getElementById("email").value;
+    if (!email) {
+        let n = document.querySelector('.email1');
+        n.style.color = 'red';
+        n.innerHTML = 'Email cannot be null';
+        // $('.name').attr('required','required');
+        return;
+    }
+    if (!(email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/))) {
+        let n = document.querySelector('.email1');
+        n.style.color = 'red';
+        n.innerHTML = 'Wrong Format';
+        return;
+    }
+
     var dateofbirth = document.getElementById("datepicker").value;
+    if (!dateofbirth) {
+        let n = document.querySelector('.dateofbirth1');
+        n.style.color = 'red';
+        n.innerHTML = 'DOB cannot be null';
+        // $('.name').attr('required','required');
+        return;
+    }
+
     var dateofjoining = document.getElementById("datepicker2").value;
+    if (!dateofjoining) {
+        let n = document.querySelector('.dateofjoining1');
+        n.style.color = 'red';
+        n.innerHTML = 'DOJ cannot be null';
+        // $('.name').attr('required','required');
+        return;
+    }
+
     var department = document.getElementById("department").value;
+    if (department == "Select The Department") {
+        let n = document.querySelector('.department1');
+        n.style.color = 'red';
+        n.innerHTML = 'Please select department';
+        // $('.name').attr('required','required');
+        return;
+    }
+
     var role = document.getElementById("role").value;
+    if (role == "Select The Role") {
+        let n = document.querySelector('.role1');
+        n.style.color = 'red';
+        n.innerHTML = 'Please slect Role';
+        // $('.name').attr('required','required');
+        return;
+    }
 
     let response = await fetch("http://localhost:3000/submit", {
         method: "POST",
@@ -69,11 +123,11 @@ const saveEmp = async () => {
             "email": email
         })
     });
-    if(response.status===200){
+    if (response.status === 200) {
         // alert('Form Submitted succesfully');
         window.location.assign('form');
     }
-    else{
+    else {
         window.location.assign('404');
     }
     console.log(response);
@@ -82,16 +136,22 @@ save.addEventListener('click', saveEmp);
 
 // Form data Submission End
 
-$( function() {
-    $( "#datepicker" ).datepicker({
-      changeMonth: true,
-      changeYear: true
+$(function () {
+    $("#datepicker").datepicker({
+        changeMonth: true,
+        changeYear: true,
+        maxDate: "+16Y",
+        minDate: "-100Y",
+        yearRange: "-100:+16"
     });
-  } );
+});
 
-  $( function() {
-    $( "#datepicker2" ).datepicker({
-      changeMonth: true,
-      changeYear: true
+$(function () {
+    $("#datepicker2").datepicker({
+        changeMonth: true,
+        changeYear: true,
+        maxDate: "+16Y",
+        minDate: "-100Y",
+        yearRange: "-100:+16"
     });
-  } );
+});
